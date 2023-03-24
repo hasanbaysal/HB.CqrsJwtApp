@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+@model CategoryListModel
+
+
+<h1>Update</h1>
+
+
+<div class="row">
+    <div class="col-md-8 mx-auto shadow">
+
+        <form asp-action="Update" asp-controller="Categories" method="post">
+            
+            <input  type="hidden" asp-for="Id"/>
+            <div class="mb-3">
+                <label class="form-label"> Definition</label>
+                <input asp-for="Definition" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-danger">Update</button>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger">
+
+            </div>
+        </form>
+
+    </div>
+</div>

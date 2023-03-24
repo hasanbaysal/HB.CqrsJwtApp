@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model ProductCreateModel
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <form asp-action="Create" method="post">
+            <h1 class="text-center">Create</h1>
+
+            <div class="mb-3">
+                <label class="form-label" asp-for="Price"></label>
+                <input class="form-control" asp-for="Price" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Stock"></label>
+                <input class="form-control" asp-for="Stock" />
+            </div>
+             <div class="mb-3">
+                <label class="form-label" asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Price"></label>
+
+                <select class="form-select" asp-items="@ViewBag.selectList" asp-for="CategoryId">
+                    <option disabled selected>bir kategori seçiniz</option>
+              </select>
+
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">create</button>
+            </div>
+        </form>
+    </div>
+</div>
